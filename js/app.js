@@ -1,0 +1,123 @@
+/* --------------------------------------------------------------------------
+   1. DATOS (reemplazar por datos reales / fetch a una API en el futuro)
+   -------------------------------------------------------------------------- */
+const CATEGORY_META = {
+  musica:      { label: "Música",           color: "#9B5DE5", icon: "graphic_eq" },
+  arte:        { label: "Arte",             color: "#FF6B6B", icon: "palette" },
+  gastronomia: { label: "Gastronomía",      color: "#F4A261", icon: "restaurant" },
+  deportes:    { label: "Deportes",         color: "#2A9D8F", icon: "sports_soccer" },
+  cultura:     { label: "Cultura",          color: "#E76F51", icon: "theater_comedy" },
+  educacion:   { label: "Educación",        color: "#457B9D", icon: "school" },
+  tecnologia:  { label: "Tecnología",       color: "#4361EE", icon: "memory" },
+  ferias:      { label: "Ferias y mercados",color: "#F72585", icon: "storefront" },
+};
+
+const CATEGORIES = [
+  { key: "musica",      count: 128 },
+  { key: "arte",        count: 74 },
+  { key: "gastronomia", count: 96 },
+  { key: "deportes",    count: 52 },
+  { key: "cultura",     count: 83 },
+  { key: "educacion",   count: 41 },
+  { key: "tecnologia",  count: 67 },
+  { key: "ferias",      count: 39 },
+];
+
+const EVENTS = [
+  {
+    id: "sunset-sessions",
+    title: "Sunset Sessions: Jazz Contemporáneo & Vinos Naturales",
+    category: "musica",
+    date: "Sáb 13 Mayo",
+    time: "19:30",
+    location: "Poblenou Sky Lounge",
+    price: "$35.000",
+    badge: "POPULAR",
+    imageLabel: "EVENT CARD — SUNSET SESSIONS",
+  },
+  {
+    id: "mercado-terracota",
+    title: "Mercado Terracota: Ceramistas y Diseño Independiente",
+    category: "ferias",
+    date: "Dom 14 Mayo",
+    time: "11:00",
+    location: "Nave Central, Poblenou",
+    price: "GRATIS",
+    badge: "GRATIS",
+    imageLabel: "EVENT CARD — MERCADO TERRACOTA",
+  },
+  {
+    id: "noche-de-vinilos",
+    title: "Noche de Vinilos: Selección Post-Punk & New Wave",
+    category: "musica",
+    date: "Vie 19 Mayo",
+    time: "22:00",
+    location: "Sala Apolo",
+    price: "$28.000",
+    badge: "HOY",
+    imageLabel: "EVENT CARD — NOCHE DE VINILOS",
+  },
+  {
+    id: "cata-natural",
+    title: "Cata Guiada: Vinos Naturales de Terra Alta",
+    category: "gastronomia",
+    date: "Sáb 20 Mayo",
+    time: "18:00",
+    location: "Celler Urbà",
+    price: "$42.000",
+    badge: "ÚLTIMOS CUPOS",
+    imageLabel: "EVENT CARD — CATA NATURAL",
+  },
+  {
+    id: "muralismo-urbano",
+    title: "Recorrido de Muralismo Urbano en El Raval",
+    category: "arte",
+    date: "Dom 21 Mayo",
+    time: "10:30",
+    location: "El Raval",
+    price: "$15.000",
+    badge: "",
+    imageLabel: "EVENT CARD — MURALISMO URBANO",
+  },
+  {
+    id: "demo-day-tech",
+    title: "Demo Day: Startups Culturales & Creative Tech",
+    category: "tecnologia",
+    date: "Jue 25 Mayo",
+    time: "17:00",
+    location: "Pier01, Barcelona Tech City",
+    price: "$18.000",
+    badge: "POPULAR",
+    imageLabel: "EVENT CARD — DEMO DAY TECH",
+  },
+];
+
+const REVIEWS = [
+  {
+    name: "Clara Valls",
+    role: "Asistió a la sesión de Abril · Arquitecta",
+    rating: 5,
+    date: "Hace 3 semanas",
+    comment: "El acústico logra en esta azotea es sobrecogedora. El atardecer detrás de la Sagrada Família mientras sonaba el solo de sax y el aroma de naranjo de Terra Alta fue, sin exagerar, uno de los mejores momentos culturales del año en Barcelona.",
+    helpful: 24,
+    imageLabel: "AVATAR — CLARA VALLS",
+  },
+  {
+    name: "Mateo Giménez",
+    role: "Comprador verificado · Productor musical",
+    rating: 5,
+    date: "Hace 1 mes",
+    comment: "Organización impecable. Sin aglomeraciones, aforo respetado al milímetro y las entradas siempre llegan bien de baja intervención. Repetiré seguro con amigos de fuera.",
+    helpful: 9,
+    imageLabel: "AVATAR — MATEO GIMÉNEZ",
+  },
+  {
+    name: "Laura Duprat",
+    role: "Asistente habitual NEXO",
+    rating: 4,
+    date: "Hace 1 mes",
+    comment: "El ambiente es sublime. Recomiendo llegar puntual a las 19:30 para tomar sitio en primera fila frente a los músicos y disfrutar de la transición de luz al atardecer.",
+    helpful: 15,
+    imageLabel: "AVATAR — LAURA DUPRAT",
+  },
+];
