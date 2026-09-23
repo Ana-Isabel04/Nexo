@@ -1,5 +1,6 @@
 /* ==========================================================================
    NEXO — Estilos base y placeholders de imagen
+   Todo lo que Tailwind no resuelve limpiamente vive aquí.
    ========================================================================== */
 
 html {
@@ -114,4 +115,248 @@ h1, h2, h3, h4,
 }
 .avatar-placeholder .material-symbols-outlined {
   font-size: 55%;
+}
+
+/* --------------------------------------------------------------------------
+   MAPA ESTILIZADO (placeholder)
+   -------------------------------------------------------------------------- */
+.map-placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #FDF7EE;
+  overflow: hidden;
+}
+
+.map-placeholder .map-block {
+  position: absolute;
+  background: #F2E7D6;
+  border: 1px solid rgba(23, 21, 31, 0.06);
+}
+
+.map-placeholder .map-road {
+  position: absolute;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 1px rgba(23, 21, 31, 0.05);
+}
+
+.map-placeholder .map-water {
+  position: absolute;
+  background: #E3F0F5;
+}
+
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-pin .pin-body {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px 9999px 9999px 2px;
+  background: #17151F;
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 14px -4px rgba(23, 21, 31, 0.4);
+}
+
+.map-pin .pin-body .material-symbols-outlined {
+  transform: rotate(-45deg);
+  color: #FFF4E3;
+  font-size: 18px;
+}
+
+.map-pin.pin-dot .pin-body {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  transform: none;
+  background: rgba(23, 21, 31, 0.35);
+  box-shadow: none;
+}
+
+@keyframes ripple {
+  0% { transform: scale(0.6); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.map-pin .pin-ripple {
+  position: absolute;
+  inset: -6px;
+  border-radius: 9999px;
+  background: rgba(23, 21, 31, 0.25);
+  animation: ripple 2.2s ease-out infinite;
+  z-index: -1;
+}
+
+/* --------------------------------------------------------------------------
+   COMPONENTES VARIOS
+   -------------------------------------------------------------------------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  background: #17151F;
+  color: #FFF4E3;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  transition: background 200ms ease, transform 200ms ease;
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  background: #302c3d;
+}
+.btn-primary .btn-arrow {
+  transition: transform 200ms ease;
+}
+.btn-primary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 24px;
+  border-radius: 9999px;
+  background: transparent;
+  border: 1.5px solid #17151F;
+  color: #17151F;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  transition: background 200ms ease, color 200ms ease;
+  white-space: nowrap;
+}
+.btn-secondary:hover {
+  background: #17151F;
+  color: #FFF4E3;
+}
+.btn-secondary .btn-arrow {
+  transition: transform 200ms ease;
+}
+.btn-secondary:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+.event-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(23, 21, 31, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px -2px rgba(23, 21, 31, 0.05), 0 2px 6px -1px rgba(23, 21, 31, 0.02);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -6px rgba(23, 21, 31, 0.10);
+}
+.event-card:hover .event-card-img {
+  transform: scale(1.03);
+}
+.event-card-img {
+  transition: transform 500ms ease;
+}
+
+.category-card {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.category-card:hover {
+  transform: translateY(-2px);
+}
+
+.floating-shadow {
+  box-shadow: 0 12px 32px -4px rgba(23, 21, 31, 0.08), 0 4px 12px -2px rgba(23, 21, 31, 0.04);
+}
+
+.input-field {
+  height: 52px;
+  background: #FFFFFF;
+  border: 1px solid rgba(23, 21, 31, 0.16);
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.input-field:focus {
+  border-color: #17151F;
+  box-shadow: 0 0 0 3px rgba(23, 21, 31, 0.08);
+  outline: none;
+}
+
+/* Menú mobile */
+#mobileMenu {
+  transition: max-height 280ms ease, opacity 220ms ease;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+#mobileMenu.open {
+  max-height: 640px;
+  opacity: 1;
+}
+
+/* Tabs de agenda / detalle */
+.tab-btn[aria-selected="true"] {
+  background: #17151F;
+  color: #FFF4E3;
+}
+
+/* Acordeón */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 300ms ease;
+}
+.accordion-item.open .accordion-content {
+  max-height: 400px;
+}
+.accordion-item.open .accordion-chevron {
+  transform: rotate(180deg);
+}
+.accordion-chevron {
+  transition: transform 200ms ease;
+}
+
+/* Favorito */
+.fav-btn .material-symbols-outlined {
+  font-variation-settings: 'FILL' 0;
+  transition: transform 150ms ease;
+}
+.fav-btn.active .material-symbols-outlined {
+  font-variation-settings: 'FILL' 1;
+  color: #FF6B6B;
+}
+.fav-btn.active {
+  transform: scale(1.02);
+}
+
+/* Barras de distribución de reseñas */
+.rating-bar-track {
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(23, 21, 31, 0.08);
+  overflow: hidden;
+}
+.rating-bar-fill {
+  height: 100%;
+  background: #17151F;
+  border-radius: 9999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
