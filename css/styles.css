@@ -1,0 +1,36 @@
+/* ==========================================================================
+   NEXO — Estilos base y placeholders de imagen
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.font-display,
+.nexo-logo,
+h1, h2, h3, h4,
+.font-heading {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF4E3;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(23, 21, 31, 0.18);
+  border-radius: 9999px;
+}
+
+:focus-visible {
+  outline: 2px solid #17151F;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
