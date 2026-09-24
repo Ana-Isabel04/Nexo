@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sunset Sessions: Jazz Contemporáneo & Vinos Naturales — NEXO</title>
+<meta name="description" content="Detalle del evento Sunset Sessions en Poblenou Sky Lounge, Barcelona." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#FFF4E3",
+          ink: "#17151F",
+          subtle: "#F5E8D3",
+          music: "#9B5DE5",
+          art: "#FF6B6B",
+          gastronomy: "#F4A261",
+          sports: "#2A9D8F",
+          culture: "#E76F51",
+          education: "#457B9D",
+          technology: "#4361EE",
+          fairs: "#F72585",
+          pink: "#FFB5C8",
+          yellow: "#FFD85C",
+          green: "#8FD6A5",
+          blue: "#78C7E8",
+        },
+        fontFamily: {
+          display: ["Space Grotesk", "sans-serif"],
+          body: ["DM Sans", "sans-serif"],
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body class="bg-cream text-ink font-body antialiased">
+
+<!-- ============================================================ -->
+<!-- NAVBAR (idéntica a index.html)                                -->
+<!-- ============================================================ -->
+<header id="siteHeader" class="sticky top-0 z-50 bg-cream/90 backdrop-blur-lg border-b border-ink/8 transition-shadow">
+  <div class="max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12 h-20 flex items-center justify-between gap-4">
+    <div class="flex items-center gap-8">
+      <a href="index.html" class="font-display font-bold text-2xl tracking-tight text-ink">NEXO</a>
+      <nav class="hidden lg:flex items-center gap-1" aria-label="Navegación principal">
+        <a href="index.html#explorar" class="px-4 py-2 rounded-full text-sm font-display font-semibold text-ink/60 hover:text-ink hover:bg-ink/5 transition-colors">Explorar</a>
+        <a href="index.html#eventos" class="px-4 py-2 rounded-full text-sm font-display font-semibold bg-ink text-cream" aria-current="page">Eventos</a>
+        <a href="index.html#categorias" class="px-4 py-2 rounded-full text-sm font-display font-semibold text-ink/60 hover:text-ink hover:bg-ink/5 transition-colors">Categorías</a>
+        <a href="#" class="px-4 py-2 rounded-full text-sm font-display font-semibold text-ink/60 hover:text-ink hover:bg-ink/5 transition-colors">Comunidades</a>
+      </nav>
+    </div>
+    <div class="hidden md:flex items-center gap-2 flex-1 max-w-xs">
+      <button type="button" aria-label="Buscar eventos en NEXO" class="w-full flex items-center gap-2 px-4 h-11 rounded-full border border-ink/12 bg-white text-ink/50 text-sm hover:border-ink/25 transition-colors">
+        <span class="material-symbols-outlined text-lg" aria-hidden="true">search</span>
+        <span>Buscar eventos…</span>
+      </button>
+    </div>
+    <div class="flex items-center gap-2 md:gap-3">
+      <button type="button" aria-label="Buscar" class="md:hidden w-11 h-11 rounded-full flex items-center justify-center hover:bg-ink/5 transition-colors">
+        <span class="material-symbols-outlined" aria-hidden="true">search</span>
+      </button>
+      <a href="#" class="btn-primary hidden sm:inline-flex !h-11 !px-5 text-[13px]">Crear evento <span class="btn-arrow" aria-hidden="true">→</span></a>
+      <button type="button" aria-label="Ver perfil de usuario" class="w-11 h-11 rounded-full overflow-hidden border border-ink/10">
+        <div class="avatar-placeholder w-full h-full" role="img" aria-label="Avatar pendiente: NAV PROFILE">
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        </div>
+      </button>
+      <button id="mobileMenuBtn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden w-11 h-11 rounded-full flex items-center justify-center hover:bg-ink/5 transition-colors">
+        <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav id="mobileMenu" class="lg:hidden border-t border-ink/8 bg-cream" aria-label="Navegación mobile">
+    <div class="px-5 py-4 flex flex-col gap-1">
+      <a href="index.html#explorar" class="px-4 py-3 rounded-xl font-display font-semibold text-ink/70 hover:bg-ink/5">Explorar</a>
+      <a href="index.html#eventos" class="px-4 py-3 rounded-xl font-display font-semibold bg-ink text-cream">Eventos</a>
+      <a href="index.html#categorias" class="px-4 py-3 rounded-xl font-display font-semibold text-ink/70 hover:bg-ink/5">Categorías</a>
+      <a href="#" class="px-4 py-3 rounded-xl font-display font-semibold text-ink/70 hover:bg-ink/5">Comunidades</a>
+    </div>
+  </nav>
+</header>
+
+<main class="max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12">
+
+  <!-- BREADCRUMBS + ACCIONES -->
+  <div class="pt-5 pb-3 flex flex-wrap items-center justify-between gap-3">
+    <nav class="flex items-center gap-2 text-[12px] text-ink/55 flex-wrap" aria-label="Ruta de navegación">
+      <a href="index.html" class="hover:text-ink transition-colors">Explorar</a><span aria-hidden="true">/</span>
+      <a href="#" class="hover:text-ink transition-colors">Barcelona</a><span aria-hidden="true">/</span>
+      <a href="#" class="hover:text-ink transition-colors">Música</a><span aria-hidden="true">/</span>
+      <span class="text-ink font-medium truncate max-w-[220px] sm:max-w-md">Sunset Sessions</span>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button type="button" class="fav-btn flex items-center gap-1.5 px-4 h-10 rounded-full bg-white shadow-sm text-[13px] font-display font-semibold hover:bg-subtle transition-colors" aria-pressed="false">
+        <span class="material-symbols-outlined text-base" aria-hidden="true">favorite</span>Guardar
+      </button>
+      <button type="button" class="flex items-center gap-1.5 px-4 h-10 rounded-full bg-white shadow-sm text-[13px] font-display font-semibold hover:bg-subtle transition-colors">
+        <span class="material-symbols-outlined text-base" aria-hidden="true">share</span>Compartir <span aria-hidden="true">↗</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ENCABEZADO DE EVENTO -->
+  <section class="pb-6 flex flex-col gap-3">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-white text-[11px] font-display font-bold uppercase tracking-wider" style="background:#9B5DE5;">
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">graphic_eq</span>Música
+      </span>
+      <span class="px-3 py-1 rounded-full bg-[#FF7568] text-white text-[11px] font-display font-bold uppercase tracking-wider">Últimos 12 cupos</span>
+      <span class="px-3 py-1 rounded-full bg-yellow text-ink text-[11px] font-display font-bold uppercase tracking-wider">Popular</span>
+      <span class="px-3 py-1 rounded-full bg-subtle text-ink/60 text-[11px] font-display font-bold uppercase tracking-wider">Azotea privada</span>
+    </div>
+    <h1 class="font-display font-bold text-[30px] md:text-[44px] leading-[1.02] tracking-tight text-ink max-w-4xl">
+      Sunset Sessions: Jazz Contemporáneo & Vinos Naturales en Azotea
+    </h1>
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-[14px] text-ink/60 pt-1">
+      <div class="flex items-center gap-1.5 font-semibold text-ink">
+        <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>
+        4.9 <span class="font-normal text-ink/55 underline underline-offset-2 decoration-ink/25 cursor-pointer">(128 opiniones)</span>
+      </div>
+      <span class="text-ink/25" aria-hidden="true">•</span>
+      <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base" aria-hidden="true">location_on</span>Poblenou Sky Lounge <span class="text-ink/45">(a 850 m de ti)</span></div>
+      <span class="text-ink/25" aria-hidden="true">•</span>
+      <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base" aria-hidden="true">calendar_today</span>Sábado 13 Mayo</div>
+      <span class="text-ink/25" aria-hidden="true">•</span>
+      <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-base" aria-hidden="true">schedule</span>19:30 a 23:00 h</div>
+    </div>
+  </section>
+
+  <!-- LAYOUT PRINCIPAL 2 COLUMNAS -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start pb-16" id="gallerySection">
+
+    <!-- ============ COLUMNA IZQUIERDA ============ -->
+    <div class="lg:col-span-8 flex flex-col gap-10 min-w-0">
+
+      <!-- GALERÍA MOSAICO -->
+      <section class="grid grid-cols-1 md:grid-cols-12 gap-3 h-auto md:h-[420px] rounded-2xl overflow-hidden">
+        <div class="md:col-span-8 relative h-64 md:h-full">
+          <div class="img-placeholder rounded-xl md:rounded-none" role="img" aria-label="Imagen pendiente: HERO EVENT">
+            <div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">image</span><span class="ph-label">HERO EVENT · 16:9</span></div>
+          </div>
+          <div class="absolute bottom-3 left-3 px-3 py-1.5 rounded-lg bg-cream/90 backdrop-blur text-[11px] font-display font-bold uppercase text-ink">Vista panorámica 360° · Poblenou</div>
+        </div>
+        <div class="md:col-span-4 grid grid-cols-3 md:grid-cols-1 gap-3 h-full">
+          <div class="relative aspect-square md:aspect-auto md:h-full">
+            <div class="img-placeholder ph-sm rounded-lg" role="img" aria-label="Imagen pendiente: EVENT GALLERY 01">
+              <div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">wine_bar</span><span class="ph-label">GALLERY 01</span></div>
+            </div>
+          </div>
+          <div class="relative aspect-square md:aspect-auto md:h-full">
+            <div class="img-placeholder ph-sm rounded-lg" role="img" aria-label="Imagen pendiente: EVENT GALLERY 02">
+              <div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">music_note</span><span class="ph-label">GALLERY 02</span></div>
+            </div>
+          </div>
+          <div class="relative aspect-square md:aspect-auto md:h-full">
+            <div class="img-placeholder ph-sm rounded-lg" role="img" aria-label="Imagen pendiente: EVENT GALLERY 03">
+              <div class="ph-inner"><span class="material-symbols-outlined" aria-hidden="true">groups</span><span class="ph-label">GALLERY 03</span></div>
+            </div>
+            <button id="galleryMoreBtn" type="button" class="absolute inset-0 bg-ink/45 backdrop-blur-[1px] flex items-center justify-center text-cream font-display font-semibold text-[13px] hover:bg-ink/55 transition-colors rounded-lg">
+              +14 fotos
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- AFORO -->
+      <section class="bg-white p-4 rounded-2xl shadow-sm flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 w-full md:w-auto">
+          <div class="w-11 h-11 rounded-full bg-subtle flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-ink/70" aria-hidden="true">groups</span>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 flex-wrap">
+              <p class="font-display font-semibold text-[14px] text-ink">Aforo casi completo</p>
+              <span class="px-2 py-0.5 rounded-full bg-[#FFDDD8] text-[#A9362E] text-[10px] font-display font-bold uppercase tracking-wide">80% ocupado</span>
+            </div>
+            <p class="text-[12px] text-ink/50">48 de 60 lugares reservados por la comunidad cultural</p>
+          </div>
+        </div>
+        <div class="w-full md:w-56 h-2 rounded-full bg-subtle overflow-hidden" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Aforo ocupado">
+          <div class="h-full rounded-full" style="width:80%; background:linear-gradient(90deg,#9B5DE5,#17151F);"></div>
+        </div>
+        <p class="text-[12px] text-ink/50 whitespace-nowrap">Quedan 12 puestos</p>
+      </section>
+
+      <!-- SOBRE LA EXPERIENCIA -->
+      <section class="flex flex-col gap-4">
+        <h2 class="font-display font-semibold text-[22px] text-ink flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-music" aria-hidden="true"></span>Sobre la experiencia
+        </h2>
+        <p class="text-[16px] leading-relaxed text-ink/75">
+          Una velada íntima de escucha activa y maridaje consciente diseñada para conectar el sonido acústico de vanguardia con la arquitectura industrial y el crepúsculo mediterráneo.
+        </p>
+        <p class="text-[15px] leading-relaxed text-ink/60">
+          En lo alto de una antigua fábrica rehabilitada en Poblenou, el trío residente de Soundscapes presenta composiciones originales de jazz modal y ambient contemporáneo mientras el cielo vira al violeta. Entre sorbo y sorbo, un sumiller natural va guiando una degustación comentada de vinos mínimamente intervenidos de Penedès y Terra Alta.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+          <div class="p-4 rounded-xl bg-subtle/60 flex flex-col gap-2">
+            <span class="material-symbols-outlined text-gastronomy" aria-hidden="true">wine_bar</span>
+            <p class="font-display font-semibold text-[13px] text-ink">Cata de vinos naturales</p>
+            <p class="text-[12px] text-ink/55">3 copas de vino biodinámico curado por productores locales independientes</p>
+          </div>
+          <div class="p-4 rounded-xl bg-subtle/60 flex flex-col gap-2">
+            <span class="material-symbols-outlined text-music" aria-hidden="true">music_note</span>
+            <p class="font-display font-semibold text-[13px] text-ink">Concierto en directo</p>
+            <p class="text-[12px] text-ink/55">2 sets acústicos exclusivos (90 min) con tapas ligeras disponibles</p>
+          </div>
+          <div class="p-4 rounded-xl bg-subtle/60 flex flex-col gap-2">
+            <span class="material-symbols-outlined text-culture" aria-hidden="true">visibility</span>
+            <p class="font-display font-semibold text-[13px] text-ink">Acceso al mirador 360°</p>
+            <p class="text-[12px] text-ink/55">Acceso libre a la azotea y servicio completo de tapas ligeras</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CRONOGRAMA / AGENDA (acordeón) -->
+      <section class="flex flex-col gap-4">
+        <h2 class="font-display font-semibold text-[22px] text-ink">Cronograma de la sesión</h2>
+        <div class="flex flex-col gap-2">
+          <div class="accordion-item open rounded-xl bg-white border border-ink/8 overflow-hidden">
+            <button class="accordion-trigger w-full flex items-center justify-between gap-3 p-4 text-left" aria-expanded="true">
+              <div class="flex items-center gap-3">
+                <span class="font-display font-bold text-[13px] text-ink/50 w-14 flex-shrink-0">19:30</span>
+                <span class="font-display font-semibold text-[14px] text-ink">Apertura de terraza & Copa de bienvenida</span>
+              </div>
+              <span class="material-symbols-outlined accordion-chevron text-ink/40" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="accordion-content">
+              <p class="px-4 pb-4 pl-[4.5rem] text-[13px] text-ink/55">Recepción musical ambient y servicio del primer vino ancestral.</p>
+            </div>
+          </div>
+          <div class="accordion-item rounded-xl bg-white border border-ink/8 overflow-hidden">
+            <button class="accordion-trigger w-full flex items-center justify-between gap-3 p-4 text-left" aria-expanded="false">
+              <div class="flex items-center gap-3">
+                <span class="font-display font-bold text-[13px] text-ink/50 w-14 flex-shrink-0">20:15</span>
+                <span class="font-display font-semibold text-[14px] text-ink">Set 1: Sunset Modal Jazz</span>
+              </div>
+              <span class="material-symbols-outlined accordion-chevron text-ink/40" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="accordion-content">
+              <p class="px-4 pb-4 pl-[4.5rem] text-[13px] text-ink/55">Improvisación contemporánea y diálogo rítmico durante la puesta de sol.</p>
+            </div>
+          </div>
+          <div class="accordion-item rounded-xl bg-white border border-ink/8 overflow-hidden">
+            <button class="accordion-trigger w-full flex items-center justify-between gap-3 p-4 text-left" aria-expanded="false">
+              <div class="flex items-center gap-3">
+                <span class="font-display font-bold text-[13px] text-ink/50 w-14 flex-shrink-0">21:15</span>
+                <span class="font-display font-semibold text-[14px] text-ink">Pausa sensorial & Cata guiada</span>
+              </div>
+              <span class="material-symbols-outlined accordion-chevron text-ink/40" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="accordion-content">
+              <p class="px-4 pb-4 pl-[4.5rem] text-[13px] text-ink/55">Segundo vino de maceración carbónica y notas del enólogo invitado.</p>
+            </div>
+          </div>
+          <div class="accordion-item rounded-xl bg-white border border-ink/8 overflow-hidden">
+            <button class="accordion-trigger w-full flex items-center justify-between gap-3 p-4 text-left" aria-expanded="false">
+              <div class="flex items-center gap-3">
+                <span class="font-display font-bold text-[13px] text-ink/50 w-14 flex-shrink-0">21:45</span>
+                <span class="font-display font-semibold text-[14px] text-ink">Set 2: Nocturno Eléctrico & Jam final</span>
+              </div>
+              <span class="material-symbols-outlined accordion-chevron text-ink/40" aria-hidden="true">expand_more</span>
+            </button>
+            <div class="accordion-content">
+              <p class="px-4 pb-4 pl-[4.5rem] text-[13px] text-ink/55">Cierre con texturas electrónicas orgánicas y atmósfera nocturna.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORGANIZADOR -->
+      <section class="p-5 rounded-2xl bg-white border border-ink/8 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="relative flex-shrink-0">
+            <!-- IMAGE: ORGANIZER AVATAR -->
+            <div class="avatar-placeholder" style="width:56px; height:56px;" role="img" aria-label="Avatar pendiente: ORGANIZER AVATAR">
+              <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-5 h-5 rounded-full bg-blue border-2 border-white flex items-center justify-center">
+              <span class="material-symbols-outlined text-white" style="font-size:11px;" aria-hidden="true">check</span>
+            </span>
+          </div>
+          <div class="min-w-0">
+            <div class="flex items-center gap-2 flex-wrap">
+              <p class="font-display font-semibold text-[16px] text-ink truncate">Colectivo Soundscapes BCN</p>
+              <span class="px-2 py-0.5 rounded-full bg-subtle text-[10px] font-display font-bold uppercase tracking-wide text-ink/60">Verificado NEXO</span>
+            </div>
+            <p class="text-[13px] text-ink/55 truncate">Curadores de música experimental y microfestivales urbanos desde 2021.</p>
+            <div class="flex items-center gap-3 text-[12px] text-ink/50 pt-1">
+              <span>24 eventos realizados</span><span aria-hidden="true">•</span>
+              <span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>4.95 Rating</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 flex-shrink-0 w-full sm:w-auto">
+          <button type="button" class="btn-secondary flex-1 sm:flex-none justify-center !h-11 !px-5 text-[13px]">Ver perfil</button>
+          <button type="button" class="btn-primary flex-1 sm:flex-none justify-center !h-11 !px-5 text-[13px]">Contactar <span class="material-symbols-outlined text-base" aria-hidden="true">chat</span></button>
+        </div>
+      </section>
+
+      <!-- UBICACIÓN Y LLEGADA -->
+      <section class="flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <h2 class="font-display font-semibold text-[22px] text-ink">Ubicación y llegada</h2>
+          <a href="#" class="hidden sm:inline-flex items-center gap-1 text-[13px] font-display font-semibold text-ink hover:gap-2 transition-all">Abrir en Google Maps <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="text-[14px] text-ink/60 -mt-2">Carrer de Pujades 142, 5ª Planta (Acceso por montacargas restaurado), Poblenou</p>
+
+        <div class="rounded-2xl overflow-hidden border border-ink/8 h-[320px] relative">
+          <!-- IMAGE/MAP: EVENT MAP -->
+          <div class="map-placeholder">
+            <div class="map-water" style="right:0; top:0; width:30%; height:100%;"></div>
+            <div class="map-block" style="left:10%; top:10%; width:20%; height:20%; border-radius:6px;"></div>
+            <div class="map-block" style="left:34%; top:14%; width:16%; height:18%; border-radius:6px;"></div>
+            <div class="map-block" style="left:14%; top:40%; width:24%; height:20%; border-radius:6px;"></div>
+            <div class="map-block" style="left:40%; top:44%; width:18%; height:22%; border-radius:6px;"></div>
+            <div class="map-block" style="left:16%; top:68%; width:20%; height:20%; border-radius:6px;"></div>
+            <div class="map-road" style="left:8%; top:0; width:6px; height:100%;"></div>
+            <div class="map-road" style="left:0; top:36%; width:100%; height:6px;"></div>
+            <div class="map-road" style="left:0; top:66%; width:100%; height:6px;"></div>
+            <div class="map-road" style="left:38%; top:0; width:6px; height:100%;"></div>
+
+            <div class="map-pin" style="left:38%; top:44%;">
+              <div class="pin-ripple"></div>
+              <div class="pin-body"><span class="material-symbols-outlined" aria-hidden="true">graphic_eq</span></div>
+            </div>
+          </div>
+          <div class="absolute top-4 left-4 p-3 rounded-xl bg-white/95 backdrop-blur shadow-sm max-w-[200px]">
+            <p class="font-display font-semibold text-[13px] text-ink">Poblenou Sky Lounge</p>
+            <p class="text-[11px] text-ink/50">Rebaixa Creativa #007</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-ink/8">
+            <span class="material-symbols-outlined text-technology" aria-hidden="true">directions_subway</span>
+            <div><p class="font-display font-semibold text-[13px] text-ink">Metro</p><p class="text-[12px] text-ink/50">L4 Llacuna (3 min a pie)</p></div>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-ink/8">
+            <span class="material-symbols-outlined text-sports" aria-hidden="true">pedal_bike</span>
+            <div><p class="font-display font-semibold text-[13px] text-ink">Bicing</p><p class="text-[12px] text-ink/50">Estación 142 frontal al portal</p></div>
+          </div>
+          <div class="flex items-center gap-3 p-3 rounded-xl bg-white border border-ink/8">
+            <span class="material-symbols-outlined text-education" aria-hidden="true">local_parking</span>
+            <div><p class="font-display font-semibold text-[13px] text-ink">Parking</p><p class="text-[12px] text-ink/50">BSM Llacuna a 150m</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESEÑAS -->
+      <section class="flex flex-col gap-5">
+        <div class="flex items-center justify-between flex-wrap gap-3">
+          <h2 class="font-display font-semibold text-[22px] text-ink">Reseñas de la comunidad</h2>
+          <button type="button" class="btn-primary !h-10 !px-4 text-[12px]">Escribir una opinión <span aria-hidden="true">✍️</span></button>
+        </div>
+        <p class="text-[13px] text-ink/50 -mt-3">Opiniones auténticas de asistentes verificados por NEXO.</p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-[auto_1fr] gap-6 p-5 rounded-2xl bg-white border border-ink/8">
+          <div class="flex flex-col items-center justify-center gap-1 sm:border-r sm:border-ink/8 sm:pr-6">
+            <p class="font-display font-bold text-[40px] leading-none text-ink">4.9</p>
+            <div class="flex items-center gap-0.5">
+              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>
+              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>
+              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>
+              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>
+              <span class="material-symbols-outlined text-base" style="font-variation-settings:'FILL' 1; color:#FFD85C;" aria-hidden="true">star</span>
+            </div>
+            <p class="text-[12px] text-ink/50 whitespace-nowrap">Basado en 128 experiencias</p>
+          </div>
+          <div class="flex flex-col gap-2 justify-center">
+            <div class="flex items-center gap-3">
+              <span class="text-[12px] text-ink/50 w-3">5</span>
+              <div class="rating-bar-track flex-1"><div class="rating-bar-fill" style="width:88%;"></div></div>
+              <span class="text-[12px] text-ink/50 w-9 text-right">88%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[12px] text-ink/50 w-3">4</span>
+              <div class="rating-bar-track flex-1"><div class="rating-bar-fill" style="width:8%;"></div></div>
+              <span class="text-[12px] text-ink/50 w-9 text-right">8%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[12px] text-ink/50 w-3">3</span>
+              <div class="rating-bar-track flex-1"><div class="rating-bar-fill" style="width:2%;"></div></div>
+              <span class="text-[12px] text-ink/50 w-9 text-right">2%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[12px] text-ink/50 w-3">2</span>
+              <div class="rating-bar-track flex-1"><div class="rating-bar-fill" style="width:1%;"></div></div>
+              <span class="text-[12px] text-ink/50 w-9 text-right">1%</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-[12px] text-ink/50 w-3">1</span>
+              <div class="rating-bar-track flex-1"><div class="rating-bar-fill" style="width:1%;"></div></div>
+              <span class="text-[12px] text-ink/50 w-9 text-right">1%</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="reviewsList" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Renderizado por app.js -> reviewCard() -->
+        </div>
+      </section>
+    </div>
+
+    <!-- ============ COLUMNA DERECHA: RESERVA (sticky) ============ -->
+    <aside class="lg:col-span-4">
+      <div class="sticky top-24 flex flex-col gap-4">
+
+        <!-- TARJETA DE RESERVA -->
+        <div class="rounded-2xl bg-white border border-ink/8 shadow-[0_12px_32px_-4px_rgba(23,21,31,0.08)] p-5 flex flex-col gap-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[12px] text-ink/50 uppercase tracking-wide font-display font-bold">Reserva inmediata</p>
+              <p class="font-display font-bold text-[26px] text-ink">$35.000 <span class="text-[13px] font-body font-normal text-ink/50">por persona</span></p>
+            </div>
+          </div>
+          <p class="text-[13px] text-ink/55 -mt-2">Tu plan está casi listo</p>
+
+          <div class="p-3 rounded-xl bg-subtle/50 flex items-center justify-between">
+            <div>
+              <p class="font-display font-semibold text-[13px] text-ink">Entrada general</p>
+              <p class="text-[11px] text-ink/50">Incluye música + 3 copas de cata</p>
+            </div>
+            <div id="ticketStepper" class="flex items-center gap-3">
+              <button id="ticketDecrease" type="button" aria-label="Reducir cantidad de entradas" class="w-8 h-8 rounded-full border border-ink/20 flex items-center justify-center hover:bg-white transition-colors">−</button>
+              <span id="ticketCount" class="font-display font-semibold text-[14px] w-4 text-center">2</span>
+              <button id="ticketIncrease" type="button" aria-label="Aumentar cantidad de entradas" class="w-8 h-8 rounded-full bg-ink text-cream flex items-center justify-center hover:bg-ink/85 transition-colors">+</button>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between p-3 rounded-xl border border-dashed border-ink/15">
+            <div>
+              <p class="text-[11px] text-ink/50 uppercase tracking-wide font-display font-bold">Fase seleccionada</p>
+              <p class="font-display font-semibold text-[13px] text-ink">Fase Sunset · desde 19:30h</p>
+            </div>
+            <a href="#" class="text-[12px] font-display font-semibold text-ink underline underline-offset-2">Cambiar fase</a>
+          </div>
+
+          <div class="flex flex-col gap-2 pt-1 text-[13px]">
+            <div class="flex items-center justify-between text-ink/60">
+              <span>Subtotal (<span id="ticketCountLabel">2</span> entradas)</span><span id="ticketSubtotal" class="text-ink font-medium">$70.000</span>
+            </div>
+            <div class="flex items-center justify-between text-ink/60">
+              <span>Servicio cultural & curaduría</span><span id="ticketServiceFee" class="text-ink font-medium">$8.000</span>
+            </div>
+            <div class="flex items-center justify-between pt-2 mt-1 border-t border-ink/8 font-display font-bold text-[16px] text-ink">
+              <span>Total a pagar</span><span id="ticketTotal">$78.000</span>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-ink/45 flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-sm" aria-hidden="true">shield</span>
+            Cancelación gratuita hasta 24 horas antes del inicio del evento
+          </p>
+
+          <button type="button" class="btn-primary w-full justify-center">Asegurar mi lugar <span class="btn-arrow" aria-hidden="true">→</span></button>
+          <p class="text-[11px] text-center text-ink/40">Pago encriptado SSL · Acepta Apple Pay, Google Pay y Tarjeta</p>
+        </div>
+
+        <!-- TICKET DIGITAL -->
+        <div class="rounded-2xl bg-white border border-ink/8 p-5 flex items-center gap-4">
+          <div class="w-16 h-16 rounded-lg bg-subtle flex-shrink-0 flex items-center justify-center">
+            <!-- IMAGE: QR PREVIEW TICKET -->
+            <span class="material-symbols-outlined text-2xl text-ink/50" aria-hidden="true">qr_code_2</span>
+          </div>
+          <div class="min-w-0">
+            <p class="font-display font-semibold text-[12px] uppercase tracking-wide text-ink/50">¡Plan listo! · Preview ticket</p>
+            <p class="font-display font-semibold text-[14px] text-ink truncate">Sunset Sessions #08</p>
+            <p class="text-[11px] text-ink/50">Sáb 13 Mayo · 19:30 · 2 puestos confirmados</p>
+            <a href="#" class="text-[11px] font-display font-semibold text-culture">Acceso rápido digital</a>
+          </div>
+        </div>
+
+        <button type="button" class="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-ink/12 text-[13px] font-display font-semibold text-ink hover:bg-white transition-colors">
+          <span class="material-symbols-outlined text-base" aria-hidden="true">account_balance_wallet</span>Guardar en Wallet
+        </button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- ============================================================ -->
+<!-- FOOTER (idéntico a index.html)                                -->
+<!-- ============================================================ -->
+<footer class="bg-ink text-cream mt-8">
+  <div class="max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12 py-14 grid grid-cols-1 md:grid-cols-12 gap-10">
+    <div class="md:col-span-4 flex flex-col gap-4">
+      <span class="font-display font-bold text-2xl">NEXO</span>
+      <p class="text-cream/60 text-[14px] leading-relaxed max-w-xs">Plataforma viva de cultura metropolitana: agenda subterránea e inspiraciones creativas para tu ciudad.</p>
+      <p class="font-display font-semibold text-[13px] uppercase tracking-wider text-cream/80">Descubre. Conecta. Vive.</p>
+    </div>
+    <div class="md:col-span-4">
+      <h4 class="font-display font-semibold text-[14px] uppercase tracking-wider mb-4 text-cream/90">Categorías culturales</h4>
+      <ul class="grid grid-cols-2 gap-y-2 text-[14px] text-cream/60">
+        <li><a href="#" class="hover:text-cream transition-colors">Artes visuales</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Clubbing & DJs</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Gastronomía</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Open Air & Huerta</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Diseño & Mercados</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Teatro & Performance</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Charlas & Workshops</a></li>
+        <li><a href="#" class="hover:text-cream transition-colors">Conciertos vivos</a></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <h4 class="font-display font-semibold text-[14px] uppercase tracking-wider mb-4 text-cream/90">El pulso de la semana</h4>
+      <p class="text-cream/60 text-[14px] mb-4">Curamos cada viernes los 5 eventos indispensables de tu bandeja de entrada.</p>
+      <form class="flex gap-2" onsubmit="return false;">
+        <label class="sr-only" for="footerEmail2">Correo electrónico</label>
+        <input id="footerEmail2" type="email" required placeholder="tu@correo.com" class="flex-1 h-11 px-4 rounded-full bg-cream/10 border border-cream/20 text-cream placeholder:text-cream/40 text-[14px] focus:outline-none focus:border-cream/60" />
+        <button type="submit" class="h-11 px-5 rounded-full bg-cream text-ink font-display font-semibold text-[13px]">Suscribir</button>
+      </form>
+    </div>
+  </div>
+  <div class="border-t border-cream/10">
+    <div class="max-w-[1440px] mx-auto px-5 md:px-8 lg:px-12 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12px] text-cream/45">
+      <p>© <span id="yearNow">2026</span> NEXO Cultural Network. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-5">
+        <a href="#" class="hover:text-cream transition-colors">Términos</a>
+        <a href="#" class="hover:text-cream transition-colors">Privacidad</a>
+        <a href="#" class="hover:text-cream transition-colors">Manifiesto editorial</a>
+        <a href="#" class="hover:text-cream transition-colors">Prensa</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/app.js"></script>
+</body>
+</html>
